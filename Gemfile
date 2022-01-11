@@ -7,7 +7,7 @@ ruby "3.0.1"
 gem "rails", "~> 7.0.1"
 
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3', '~> 1.4'
+gem "sqlite3", "~> 1.4"
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
@@ -36,21 +36,10 @@ gem "bootsnap", require: false
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 gem "rack-cors"
 
-group :test do
-  # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
-  gem 'capybara'
-  gem 'guard-rspec', '~> 4.7'
-  gem 'guard-rubocop', '~> 1.3'
-  gem 'guard-shell', '~> 0.7.1'
-  gem 'rspec-rails', '~> 5.0'
-  gem 'selenium-webdriver'
-  gem 'webdrivers'
-end
-
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
-  gem 'factory_bot_rails'  
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
+  gem 'factory_bot_rails'  
 end
 
 group :development do
@@ -61,6 +50,14 @@ group :development do
   gem 'rubocop', '~> 1.24', require: false
 end
 
-
-gem "active_model_serializers", "~> 0.10.0" 
+group :test do
+  # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
+  gem 'capybara'
+  gem 'guard-rspec', '~> 4.7'
+  gem 'guard-rubocop', '~> 1.3'
+  gem 'guard-shell', '~> 0.7.1'
+  gem 'rspec-rails', '~> 5.0'
+  gem 'selenium-webdriver'
+  gem 'webdrivers'
+end
 
